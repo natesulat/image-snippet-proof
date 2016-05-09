@@ -255,7 +255,7 @@
                 if (show == x) {
                     if ($(window).width() < maxwidth) {
                         hide.fadeOut(1000, function() {
-                            hide.eq(show).fadeIn(1000);
+                            hide.eq(show).fadeIn();
                         });
                     } else {
                         alert('Please shrink your window to below ' + maxwidth + ' pixels');
