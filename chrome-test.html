@@ -242,7 +242,9 @@
                 buttons = ['#to-medium', '#to-small', '#to-xs'],
                 maxwidths = [1199, 991, 768];
             for (i in buttons) {
-                $(buttons[i]).click(showTheSlide(sections, i, maxwidths[i]));
+                $(buttons[i]).click(function () {
+                    showTheSlide(sections, i, maxwidths[i]);
+                });
             }
         });
 
