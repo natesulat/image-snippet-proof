@@ -241,8 +241,8 @@
             var sections = $('.section'),
                 buttons = ['#to-medium', '#to-small', '#to-xs'],
                 maxwidths = [1199, 991, 768];
-            for (i = 0; i < buttons.length; i++) {
-                buttons[i].click(showTheSlide(sections, i, maxwidths[i]));
+            for (i in buttons) {
+                $(buttons[i]).click(showTheSlide(sections, i, maxwidths[i]));
             }
         });
 
