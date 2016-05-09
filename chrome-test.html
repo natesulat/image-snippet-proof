@@ -238,34 +238,34 @@
     </div>
     <script type="text/javascript">
         $(function () {
-            var sections = $('.section'),
-                buttons = ['#to-medium', '#to-small', '#to-xs'],
-                maxwidths = [1199, 991, 768];
-            for (i in buttons) {
-                $(buttons[i]).click(function () {
-                    showTheSlide(sections, i, maxwidths[i]);
-                });
-            }
+            var sections = $('.section');
+            $('#to-medium').click(function() {
+                showTheSlide(sections, 1, 1199);
+            });
+            $('#to-small').click(function() {
+                showTheSlide(sections, 2, 991);
+            });
+            $('#to-xs').click(function() {
+                showTheSlide(sections, 3, 768);
+            });
         });
 
         function showTheSlide(hide, show, maxwidth) {
-            return function () {
-                function toSlide() {
-                    hide.hide();
-                    hide[show].show();
-                }
+            function toSlide() {
+                hide.hide();
+                hide[show].show();
+            }
 
-                function widthCheck(x, maxwidth) {
-                    if (show == x) {
-                        if ($(window).width() < maxwidth) {
-                            toSlide();
-                        } else {
-                            alert('Please shrink your window to below ' + maxwidth + ' pixels');
-                        }
+            function widthCheck(x, maxwidth) {
+                if (show == x) {
+                    if ($(window).width() < maxwidth) {
+                        toSlide();
+                    } else {
+                        alert('Please shrink your window to below ' + maxwidth + ' pixels');
                     }
                 }
-                widthCheck(show, maxwidth);
             }
+            widthCheck(show, maxwidth);
         }
     </script>
 </body>
