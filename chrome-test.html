@@ -242,28 +242,30 @@
                 buttons = ['#to-medium', '#to-small', '#to-xs'],
                 maxwidths = [1199, 991, 768];
             for (i in buttons) {
-                $(buttons[i]).click(function () {
+                $(buttons[i]).click(function (e) {
                     showTheSlide(sections, i, maxwidths[i]);
                 });
             }
         });
 
         function showTheSlide(hide, show, maxwidth) {
-            function toSlide() {
-                hide[show].show();
-            }
+            return function () {
+                function toSlide() {
+                    hide.hide();
+                    hide[show].show();
+                }
 
-            function widthCheck(x, maxwidth) {
-                if (show == x) {
-                    if ($(window).width() < maxwidth) {
-                        toSlide();
-                    } else {
-                        alert('Please shrink your window to below ' + maxwidth + ' pixels');
+                function widthCheck(x, maxwidth) {
+                    if (show == x) {
+                        if ($(window).width() < maxwidth) {
+                            toSlide();
+                        } else {
+                            alert('Please shrink your window to below ' + maxwidth + ' pixels');
+                        }
                     }
                 }
+                widthCheck(show, maxwidth);
             }
-            hide.hide();
-            widthCheck(show, maxwidth);
         }
     </script>
 </body>
