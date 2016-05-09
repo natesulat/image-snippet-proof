@@ -253,8 +253,7 @@
         function showTheSlide(hide, show, maxwidth) {
             function toSlide() {
                 hide.hide();
-                
-                $(hide[show]).show();
+                hide.eq(show).show();
             }
 
             function widthCheck(x, maxwidth) {
