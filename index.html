@@ -79,9 +79,10 @@
     <script type="text/javascript">
         $(function() {
             $('#alert').click(function(e) {
+                var alert = '<p>Please shrink your browser window to below 767px in width.</p>'+'<p>Just trust us, eh?</p>'
                 if ($(window).width() > 767) {
                     e.preventDefault();
-                    alert('<p>Please shrink your browser window to below 767px in width.</p><p>Just trust us, eh?</p>');
+                    alert(alert);
                 }
             }) 
         });
