@@ -239,27 +239,23 @@
     <script type="text/javascript">
         $(function () {
             var sections = $('.section');
-            $('#to-medium').click(function() {
+            $('#to-medium').click(function () {
                 showTheSlide(sections, 1, 1199);
             });
-            $('#to-small').click(function() {
+            $('#to-small').click(function () {
                 showTheSlide(sections, 2, 991);
             });
-            $('#to-xs').click(function() {
+            $('#to-xs').click(function () {
                 showTheSlide(sections, 3, 768);
             });
         });
 
         function showTheSlide(hide, show, maxwidth) {
-            function toSlide() {
-                hide.hide();
-                hide.eq(show).show();
-            }
-
             function widthCheck(x, maxwidth) {
                 if (show == x) {
                     if ($(window).width() < maxwidth) {
-                        toSlide();
+                        hide.hide();
+                        hide.eq(show).show();
                     } else {
                         alert('Please shrink your window to below ' + maxwidth + ' pixels');
                     }
