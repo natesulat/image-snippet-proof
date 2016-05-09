@@ -236,5 +236,32 @@
             <p>Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea. Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea.</p>
         </div>
     </div>
+    <script type="text/javascript">
+        $(function () {
+            var sections = $('.section'),
+                buttons = ['#to-medium', '#to-small', '#to-xs'],
+                maxwidths = [1199, 991, 768];
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].click(showTheSlide(sections, i, maxwidths[i]));
+            }
+        });
 
+        function showTheSlide(hide, show, maxwidth) {
+            function toSlide() {
+                hide[show].show();
+            }
+
+            function widthCheck(x, maxwidth) {
+                if (show == x) {
+                    if ($(window).width() < maxwidth) {
+                        toSlide();
+                    } else {
+                        alert('Please shrink your window to below ' + maxwidth + ' pixels');
+                    }
+                }
+            }
+            hide.hide();
+            widthCheck(show, maxwidth);
+        }
+    </script>
 </body>
