@@ -70,15 +70,17 @@
         
         <div class="col-sm-6">
             <h3 style="text-align: center;"><a href="test-pages/firefox-test.html">Firefox</a></h3>
+            <h3 style="text-align: center;"><a href="test-pages/firefox-2test.html">Firefox</a></h3>
         </div>
         
         <div class="col-sm-6">
-            <h3 style="text-align: center;"><a id="alert" href="test-pages/chrome-test.html">Chrome</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test.html">Chrome</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-2test.html">Chrome w/ Left Nav</a></h3>
         </div>
     </div>
     <script type="text/javascript">
         $(function() {
-            $('#alert').click(function(e) {
+            $('.alert').click(function(e) {
                 if ($(window).width() > 767) {
                     e.preventDefault();
                     alert('Please shrink your browser window to below 767px in width. You\'ll see why in the next page.');
