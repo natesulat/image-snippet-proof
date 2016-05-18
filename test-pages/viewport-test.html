@@ -9,12 +9,14 @@
     <script type="text/javascript">
         $(function () {
             var height = window.screen.availHeight,
-                width = window.screen.availWidth;
+                width = window.screen.availWidth,
+                density = window.devicePixelRatio;
             $('#resolution').html(width + 'x' + height);
-            $('#density').html(window.devicePixelRatio);
+            $('#density').html(density);
             $(window).resize(function () {
                 $('#resolution').html(width + 'x' + height);
-                $('#density').html(window.devicePixelRatio);
+                $('#density').html(density);
+                $('#realres').html(density * width + 'x' + density * height)
             });
         });
     </script>
@@ -83,10 +85,10 @@
             </div>
             <div class="col-sm-9">
                 <p style="text-align: center;">Screen resolution is <span id="resolution"></span></p>
-                <p style="text-align: center;">Pixel density is <span id="density"></span>x</p>
+                <p style="text-align: center;">Pixel density is <span id="density"></span>x, giving us a real resolution of <span id="realres"></span></p>
                 <hr>
                 <div class="visible-lg hidden-md hidden-sm hidden-xs">
-                    <h1>Large</h1>
+                    <h1>Large Width</h1>
                     <h2>Small Presentation</h2>
 
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 no-pad-left">
@@ -126,7 +128,7 @@
                     <p>Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea. Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea.</p>
                 </div>
                 <div class="hidden-lg visible-md hidden-sm hidden-xs">
-                    <h1>Medium</h1>
+                    <h1>Medium Width</h1>
                     <h2>Small Presentation</h2>
 
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 no-pad-left">
@@ -166,7 +168,7 @@
                     <p>Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea. Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea.</p>
                 </div>
                 <div class="hidden-lg hidden-md visible-sm hidden-xs">
-                    <h1>Small</h1>
+                    <h1>Small Width</h1>
                     <h2>Small Presentation</h2>
 
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 no-pad-left">
@@ -206,7 +208,7 @@
                     <p>Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea. Lorem ipsum dolor sit amet, cum iriure invidunt et, quo at autem dicam instructior. Id has etiam mnesarchum. Omnes tractatos inciderint nam ad. Homero dicunt pro ne, ut labore volumus definiebas sit. Ex quo nulla sententiae comprehensam. Alii molestie reprimique sit in, natum mediocritatem ad mea.</p>
                 </div>
                 <div class="hidden-lg hidden-md hidden-sm visible-xs">
-                    <h1>Extra Small</h1>
+                    <h1>Extra Small Width</h1>
                     <h2>Small Presentation</h2>
 
                     <div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 no-pad-left">
