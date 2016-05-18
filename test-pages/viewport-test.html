@@ -10,13 +10,15 @@
         $(function () {
             var height = window.screen.availHeight,
                 width = window.screen.availWidth,
-                density = window.devicePixelRatio;
+                density = window.devicePixelRatio,
+                realHeight = density * height,
+                realWidth = density * width;
             $('#resolution').html(width + 'x' + height);
             $('#density').html(density);
             $(window).resize(function () {
                 $('#resolution').html(width + 'x' + height);
                 $('#density').html(density);
-                $('#realres').html(density * width + 'x' + density * height)
+                $('#realres').html(realWidth + 'x' + realHeight)
             });
         });
     </script>
