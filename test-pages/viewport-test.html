@@ -39,6 +39,10 @@
             clear: both;
         }
         
+        .deuces {
+            display: none;
+        }
+        
         @media (min-width: 768px) {
             .container {
                 width: 750px;
@@ -54,6 +58,12 @@
         @media (min-width: 1200px) {
             .container {
                 width: 1170px;
+            }
+        }
+        
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+            .deuces {
+                display: block;
             }
         }
         
@@ -81,6 +91,7 @@
             </div>
             <div class="col-sm-9">
                 <p style="text-align: center;">Screen resolution is <span id="resolution"></span></p>
+                <p class="deuces" style="text-align: center;">This is a retina display.</p>
                 <hr>
                 <div class="visible-lg hidden-md hidden-sm hidden-xs">
                     <h1>Large</h1>
