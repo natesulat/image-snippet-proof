@@ -15,11 +15,7 @@
                 realWidth = density * width;
             $('#resolution').html(width + 'x' + height);
             $('#density').html(density);
-            $(window).resize(function () {
-                $('#resolution').html(width + 'x' + height);
-                $('#density').html(density);
-                $('#realres').html(realWidth + 'x' + realHeight)
-            });
+            $('#realres').html(realWidth + 'x' + realHeight);
         });
     </script>
 
