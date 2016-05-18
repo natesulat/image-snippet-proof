@@ -39,7 +39,7 @@
             clear: both;
         }
         
-        .deuces {
+        .deuces, .onefive, .thrices {
             display: none;
         }
         
@@ -63,6 +63,18 @@
         
         @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
             .deuces {
+                display: block;
+            }
+        }
+        
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 3/2), only screen and ( min-device-pixel-ratio: 1.5), only screen and ( min-resolution: 144dpi), only screen and ( min-resolution: 1.5dppx) {
+            .onefive {
+                display: block;
+            }
+        }
+        
+        @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and ( min--moz-device-pixel-ratio: 3), only screen and ( -o-min-device-pixel-ratio: 3/1), only screen and ( min-device-pixel-ratio: 3), only screen and ( min-resolution: 288dpi), only screen and ( min-resolution: 3dppx) {
+            .onefive {
                 display: block;
             }
         }
@@ -92,6 +104,8 @@
             <div class="col-sm-9">
                 <p style="text-align: center;">Screen resolution is <span id="resolution"></span></p>
                 <p class="deuces" style="text-align: center;">This is a retina display.</p>
+                <p class="onefive" style="text-align: center;">This is a retina display.</p>
+                <p class="thrices" style="text-align: center;">This is a retina display.</p>
                 <hr>
                 <div class="visible-lg hidden-md hidden-sm hidden-xs">
                     <h1>Large</h1>
