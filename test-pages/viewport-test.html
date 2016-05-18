@@ -10,10 +10,10 @@
         $(function () {
             var height = window.screen.availHeight,
                 width = window.screen.availWidth;
-            $('#resolution').html() = width + 'x' + height;
+            $('#resolution').html(width + 'x' + height);
             $(window).resize(function () {
-                $('#resolution').html() = width + 'x' + height;
-            })
+                $('#resolution').html(width + 'x' + height);
+            });
         });
     </script>
 
