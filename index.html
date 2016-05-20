@@ -67,27 +67,29 @@
         <h3 style="text-align: center;">
             Chrome and Firefox handle SRCSET differently. Click one of the below links to test in either browser.
         </h3>
-        
+
         <div class="col-sm-6">
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test.html">Firefox</a></h3>
-            <h3 style="text-align: center;"><a href="test-pages/firefox-2test.html">Firefox w/ Left Nav</a></h3>
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test-old.html">Firefox Legacy</a></h3>
+            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftnav.html">Firefox w/ Left Nav</a></h3>
+            <h3 style="text-align: center;"><a href="test-pages/firefox-test-fullwidth.html">Firefox Full-Width</a></h3>
+            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftnav-2.html">Firefox w/ All Sizes</a></h3>
+            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftright.html">Firefox, All Sizes, Right Column</a></h3>
         </div>
-        
+
         <div class="col-sm-6">
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test.html">Chrome</a></h3>
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-2test.html">Chrome w/ Left Nav</a></h3>
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-old.html">Chrome Legacy</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftnav.html">Chrome w/ Left Nav</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-fullwidth.html">Chrome Full-Width</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftnav-2.html">Chrome w/ All Sizes</a></h3>
+            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftright.html">Chrome, All Sizes, Right Column</a></h3>
         </div>
     </div>
     <script type="text/javascript">
-        $(function() {
-            $('.alert').click(function(e) {
+        $(function () {
+            $('.alert').click(function (e) {
                 if ($(window).width() > 767) {
                     e.preventDefault();
                     alert('Please shrink your browser window to below 767px in width. You\'ll see why in the next page.');
                 }
-            }) 
+            })
         });
     </script>
 </body>
