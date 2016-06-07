@@ -11,6 +11,10 @@
             font-family: "Source Sans Pro", sans-serif;
         }
         
+        h3 {
+            text-align: center;
+        }
+        
         .container {
             margin-right: auto;
             margin-left: auto;
@@ -64,32 +68,32 @@
 
 <body>
     <div class="container">
-        <h3 style="text-align: center;">
-            Chrome and Firefox handle SRCSET differently. Click one of the below links to test in either browser.
+        <h3>
+            Click one of the below links to examine <code>srcset</code> handling on GSA.gov layouts.
         </h3>
 
-        <div class="col-sm-6">
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftnav.html">Firefox w/ Left Nav</a></h3>
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test-fullwidth.html">Firefox Full-Width</a></h3>
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftnav-2.html">Firefox w/ All Sizes</a></h3>
-            <h3 style="text-align: center;"><a href="test-pages/firefox-test-leftright.html">Firefox, All Sizes, Right Column</a></h3>
+        <div class="col-sm-4">
+            <h3><a href="test-pages/fullwidth.html">Full-Width Page</a></h3>
         </div>
 
-        <div class="col-sm-6">
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftnav.html">Chrome w/ Left Nav</a></h3>
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-fullwidth.html">Chrome Full-Width</a></h3>
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftnav-2.html">Chrome w/ All Sizes</a></h3>
-            <h3 style="text-align: center;"><a class="alert" href="test-pages/chrome-test-leftright.html">Chrome, All Sizes, Right Column</a></h3>
+        <div class="col-sm-4">
+            <h3><a href="test-pages/leftnav.html">Page w/ Left Nav</a></h3>
+        </div>
+
+        <div class="col-sm-4">
+            <h3><a href="test-pages/leftnav.html">Page w/ Left Nav</a></h3>
         </div>
     </div>
     <script type="text/javascript">
         $(function () {
-            $('.alert').click(function (e) {
-                if ($(window).width() > 767) {
-                    e.preventDefault();
-                    alert('Please shrink your browser window to below 767px in width. You\'ll see why in the next page.');
-                }
-            })
+            if (navigator.userAgent.indexOf('Chrome') > -1) {
+                $('a').click(function (e) {
+                    if ($(window).width() > 767) {
+                        e.preventDefault();
+                        alert('Please shrink your browser window to below 767px in width. You\'ll see why in the next page.');
+                    }
+                });
+            }
         });
     </script>
 </body>
