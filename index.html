@@ -84,16 +84,4 @@
             <h3><a href="test-pages/leftnav.html">Page w/ Left Nav</a></h3>
         </div>
     </div>
-    <script type="text/javascript">
-        $(function () {
-            if (navigator.userAgent.indexOf('Chrome') > -1) {
-                $('a').click(function (e) {
-                    if ($(window).width() > 767) {
-                        e.preventDefault();
-                        alert('Please shrink your browser window to below 767px in width. You\'ll see why in the next page.');
-                    }
-                });
-            }
-        });
-    </script>
 </body>
